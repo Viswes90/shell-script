@@ -3,7 +3,7 @@
 NUMBER1=$1
 NUMBER2=$2
 
-TIMESTAMP=$(date)
+TIMESTAMP=$(date;whoami;pwd)
 echo "Script Executed at : $TIMESTAMP"
 SUM=$(($NUMBER1+$NUMBER2))
 

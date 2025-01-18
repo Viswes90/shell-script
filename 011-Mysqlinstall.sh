@@ -8,5 +8,5 @@ if [ $USERID -ne 0 ]
         echo "Error: To execute this script SUDO previlige is required"
         exit 1
     else
-        echo "You are a ROOT User"
+        echo "You are a ROOT User. Executing the Script..."
 fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER1=S1
+NUMBER1=$1
 
 # -gt, -lt, -eq, -le, -ge
 

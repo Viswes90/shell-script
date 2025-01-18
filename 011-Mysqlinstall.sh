@@ -16,7 +16,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]
     then # mysql is not installed
         echo "MySQL is Installing ..."
-        dnf install ramana -y
+        dnf install mysql -y
         if [ $? -ne 0 ]
             then
                 echo "Installation of MySQL ... FAILED"
@@ -33,7 +33,7 @@ dnf list installed git
 if [ $? -ne 0 ]
     then # git is not installed
         echo "Git is Installing ..."
-        dnf install ramanarao -y
+        dnf install git -y
         if [ $? -ne 0 ]
             then
                 echo "Installation of GIT ... FAILED"

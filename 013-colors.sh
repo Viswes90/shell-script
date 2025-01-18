@@ -23,7 +23,7 @@ if [ $USERID -ne 0 ]
         echo -e "$R Error: To execute this script SUDO previlige is required $N"
         exit 1
     else
-        echo -e "$G You are a ROOT User. Executing the Script...$N"
+        echo -e "$G You are a ROOT User. Executing the Script... $N"
 fi
 
 dnf list installed mysql

@@ -28,3 +28,19 @@ if [ $? -ne 0 ]
         echo "MySQL is already ... INSTALLED"
 fi
 
+dnf list installed git
+
+if [ $? -ne 0 ]
+    then # git is not installed
+        echo "Git is Installing ..."
+        dnf install git -y
+        if [ $? -ne 0 ]
+            then
+                echo "Installation of GIT ... FAILED"
+                exit 1
+            else   
+                echo "Installation of GIT ... SUCCESS"
+        fi
+    else 
+        echo "GIT is already ... INSTALLED"
+fi

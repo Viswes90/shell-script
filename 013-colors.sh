@@ -31,7 +31,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]
     then # mysql is not installed
         echo "MySQL is Installing ..."
-        dnf install mysql -y
+        dnf install ramana -y
         VALIDATE $? "Installing MySQL"
     else
         echo -e "MySQL is already ... $Y INSTALLED $N"
@@ -42,7 +42,7 @@ dnf list installed git
 if [ $? -ne 0 ]
     then # git is not installed
         echo "Git is Installing ..."
-        dnf install git -y
+        dnf install rupali -y
         VALIDATE $? "Installing GIT"
     else 
         echo -e "GIT is already ... $Y INSTALLED $N"

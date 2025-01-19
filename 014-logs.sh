@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "Script Start Time : $TIMESTAMP" &>>$LOG_FILE_NAME
 
 USERID=$(id -u)
 echo "${USERID}"
@@ -26,7 +25,7 @@ VALIDATE()
     fi
 }
 
-
+echo "Script Start Time : $TIMESTAMP" &>>$LOG_FILE_NAME
 
 if [ $USERID -ne 0 ]
     then 

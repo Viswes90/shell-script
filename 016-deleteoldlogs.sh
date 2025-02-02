@@ -13,7 +13,8 @@ LOG_FILE=$(echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
-VALIDATE(){
+VALIDATE()
+{
     if [ $1 -ne 0 ]
     then
         echo -e "$2 ... $R FAILURE $N"
@@ -23,7 +24,8 @@ VALIDATE(){
     fi
 }
 
-CHECK_ROOT(){
+CHECK_ROOT()
+{
     if [ $USERID -ne 0 ]
     then
         echo "ERROR:: You must have sudo access to execute this script"

@@ -14,7 +14,8 @@ LOG_FILE=$(echo $0 | awk -F "/" '{print $NF}' | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
-USAGE(){
+USAGE()
+{
     #echo -e "$R USAGE:: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(Optional)>"
     echo -e "$R USAGE:: $N backup <SOURCE_DIR> <DEST_DIR> <DAYS(Optional)>"
     exit 1
@@ -47,7 +48,7 @@ if [ -n "$FILES" ] # true if there are files to zip
 then
     echo "Files are: $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE" &>>$LOG_FILE_NAME
     if [ -f "$ZIP_FILE" ]
     then
         echo -e "Successfully created zip file for files older than $DAYS"
